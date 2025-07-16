@@ -12,23 +12,38 @@ function Activities() {
 
   return (
     <div className="container">
-      <h1 className="text-center">Activities</h1>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Activity Type</th>
-            <th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          {activities.map(activity => (
-            <tr key={activity._id}>
-              <td>{activity.activity_type}</td>
-              <td>{activity.duration}</td>
+      <h1>🏃‍♂️ Activities Dashboard</h1>
+      <div className="table-container">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>🎯 Activity Type</th>
+              <th>⏱️ Duration</th>
+              <th>📊 Status</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {activities.map(activity => (
+              <tr key={activity._id}>
+                <td>{activity.activity_type}</td>
+                <td>{activity.duration}</td>
+                <td>
+                  <span style={{
+                    padding: '0.5rem 1rem',
+                    borderRadius: '25px',
+                    background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+                    color: 'white',
+                    fontSize: '0.8rem',
+                    fontWeight: '600'
+                  }}>
+                    Active
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
