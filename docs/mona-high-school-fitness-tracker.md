@@ -547,7 +547,7 @@ class Command(BaseCommand):
 ```bash
 python monafit-tracker/backend/manage.py monafit-tracker/backend/makemigrations
 python monafit-tracker/backend/manage.py monafit-tracker/backend/migrate
-python monafit-tracker/backendmanage.py monafit-tracker/backend/populate_db
+python monafit-tracker/backend/manage.py monafit-tracker/backend/populate_db
 ```
 
 ## Using the Codespace endpoint to access the Django REST API endpoints
